@@ -1,66 +1,67 @@
 .accordion {
-  &-container {
-
+  &-row {
+    margin-bottom: 48px;
   }
   &__item {
     position: relative;
     width: 100%;
-    height: auto;
+    // min-height: 130px;
+    margin-bottom: 2px;
+    background: $blueColor;
     &.active {
-      & i:before {
-        transform: rotate(135deg);
+      & .icon-arrow {
+        transform: rotate(180deg);
       }
-      & i:after {
-        transform: rotate(225deg);
-      }
+    }
+    & .icon-arrow {
+      position: absolute;
+      width: 60px;
+      height: 100%;
+      background-size: 22px;
+      background-position: center;
+      right: 0;
+      top: 0;
+      cursor: pointer;
+      @include transition(0.3);
     }
   }
   &__content {
-    display:none;
-    padding: 0 40px 30px 0;
+    display: none;
+    background: #f3f4f5;
+    padding: 16px 24px 24px 48px;
     & p {
-      margin: 0;
       color: $defaultText;
+    }
+    & a {
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      @include transition(0.3);
+      line-height: 1;
+      &:hover {
+        border-color: $darkBlue;
+      }
     }
   }
   &__button {
     display: block;
-    padding: 30px 0 30px 0;
-    text-decoration: none;
-    color: $defaultText;
-    font-weight: 500;
-    @include fontSize(18, 30);
-    @include transition(.3);
-    line-height: 22px;
+    padding: 20px 45px 24px 20px;
+    position: relative;
+    color: $whiteColor;
+    @include transition(0.3);
+  }
+  &__title {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    border-top: 1px solid #303030;
-    margin: -3px;
+    margin-bottom: 8px;
     & i {
-      min-width: 30px;
-      min-height: 30px;
-      max-width: 30px;
-      max-height: 30px;
-      background: $whiteColor;
-      border-radius: 100px;
-      position: relative;
-      display: block;
-      margin-left: 10px;
-      &:before, &:after {
-        content: '';
-        width: 18px;
-        height: 2px;
-        position: absolute;
-        left: calc(50% - 9px);
-        top: calc(50% - 1px);
-        background: $blueColor;
-        transform: rotate(90deg);
-        @include transition(.3);
-      }
-      &:after {
-        transform: rotate(180deg);
-      }
+      margin-right: 16px;
+    }
+  }
+  &__description {
+    margin-left: 48px;
+    color: $whiteColor;
+    & a {
+      color: $whiteColor;
     }
   }
 }

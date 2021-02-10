@@ -79,31 +79,39 @@
 .text-red {
   color: $redColor;
 }
-// .icon-icon-arrow:before {
-//   content: "\e900";
-//   color: #fff;
-// }
-// .icon-icon-bing:before {
-//   content: "\e901";
-//   color: #fff;
-// }
-// .icon-icon-cart:before {
-//   content: "\e902";
-//   color: #fff;
-// }
-// .icon-icon-four-sides:before {
-//   content: "\e903";
-//   color: #fff;
-// }
-// .icon-icon-lines:before {
-//   content: "\e904";
-//   color: #fff;
-// }
-// .icon-icon-people:before {
-//   content: "\e905";
-//   color: #fff;
-// }
-// .icon-icon-search:before {
-//   content: "\e906";
-//   color: #fff;
-// }
+
+.app-title {
+  padding-left: 8px;
+  border-left: 3px solid $redColor;
+  color: #142D42;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1;
+  margin-bottom: 16px;
+  @media (max-width: $breakpoint-md) {
+    font-size: 20px;
+  }
+}
+
+.icon {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  &-info {
+    background-image: url('../img/icons/icon-info.svg');
+  }
+  &-arrow {
+    background-image: url('../img/icons/icon-arrow.svg');
+  }
+  &-arrows {
+    background-image: url('../img/icons/icon-arrows.svg');
+  }
+  &-question {
+    background-image: url('../img/icons/icon-question.svg');
+  }
+  &-hammer {
+    background-image: url('../img/icons/icon-hammer.svg');
+  }
+}

@@ -36,20 +36,6 @@ let front = {
       document.getElementById(tabName).style.display = "block";
       $(element).addClass('active');
   },
-  hoverTab: function (el, tabName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-
-    document.getElementById(tabName).style.display = "block";
-    el.currentTarget.className += " active";
-  },
 
   events: function () {
       let self = this;
@@ -91,7 +77,34 @@ let modal = {
 
       });
 
-      $(document).on('click', '.modal', function (event) {
+    //   $(document).ready(function() {
+    //     $(".accordion__item .accordion__button").on("click", function(e) {
+    //     e.preventDefault();
+    //         if ($(this).parent().hasClass("active")) {
+    //         $(this).parent().removeClass("active");
+    //         $(this).parent().find(".accordion__content").slideUp(200);
+    //         } else {
+    //         $(".accordion__item").removeClass("active");
+    //         $(this).parent().addClass("active");
+    //         $(".accordion__content").slideUp(200);
+    //         $(this).parent().find(".accordion__content").slideDown(200);
+    //         }
+    //     });
+    //   });
+    $(document).ready(function() {
+        $(".accordion__item .icon-arrow").on("click", function(e) {
+            if ($(this).parent().parent().hasClass("active")) {
+            $(this).parent().parent().removeClass("active");
+            $(this).parent().parent().find(".accordion__content").slideUp(200);
+            } else {
+            $(".accordion__item").removeClass("active");
+            $(this).parent().parent().addClass("active");
+            $(".accordion__content").slideUp(200);
+            $(this).parent().parent().find(".accordion__content").slideDown(200);
+            }
+        });
+      });
+    $(document).on('click', '.modal', function (event) {
           let self = '#' + $(this).attr('id');
           if (event.target.className == 'modal__body') {
               modal.closeModal(self);
@@ -102,16 +115,7 @@ let modal = {
           let self = '#' + $(this).closest('.modal').attr('id');
           modal.closeModal(self);
       });
-        $(document).on('click', '.scroll-to-top i', function () {
-            $('body,html').animate({
-                scrollTop : 0                       // Scroll to top of body
-            }, 500);
-      });
-        $(document).on('click', '.scroll-down i', function () {
-            $('html, body').animate({
-                scrollTop: $(this).closest("section").next().offset().top - 90
-             }, "slow");
-      });
+
 
   }
 };
@@ -119,31 +123,5 @@ let modal = {
 
 jQuery(function () {
   front.init();
-  modal.init();
-    
+  modal.init(); 
 });
-
-// $(window).scroll(function () {
-//   if ($(this).scrollTop() > 10) {
-//     $('.scroll-to-top').addClass("scrolled");
-//   } else {
-//   	$('.scroll-to-top').removeClass("scrolled");
-//   }
-// });
-
-document.body.addEventListener('keyup', function(e) {
-  if (e.which === 9) /* tab */ {
-    document.body.classList.remove('no-focus-outline');
-  }
-});
-
-
-// HIDE MENU ON BODY CLICK
-
-// $('html').click(function(e) {
-//     var a = e.target;
-//     if ($(a).parents('.menu-item-has-child').length === 0) {
-//       $('.menu-item-has-child').removeClass('show'); //hide menu item
-//    }
-//   });
-

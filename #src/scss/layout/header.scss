@@ -26,8 +26,12 @@
   display: flex;
   list-style: none;
   margin-left: auto;
+  padding-left: 0;
   & li {
     margin: 0 10px;
+    &:last-child {
+      margin-right: 0;
+    }
     & a {
       color: $whiteColor;
       padding: 0 10px;

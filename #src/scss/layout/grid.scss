@@ -22,40 +22,44 @@
 .row {
   display: flex;
   flex-flow: row wrap;
-  margin: 0 15px;
+  margin: 0 -15px;
 }
 
 .mb-16 {
   margin-bottom: 16px;
 }
 
-// @for $i from 1 through 12 {
-//   .col-xs-#{$i} {
-//     @include grid-size(8.333333% * $i);
-//   }
-// }
+@for $i from 1 through 12 {
+  .col-xs-#{$i} {
+    @include grid-size(8.333333% * $i);
+    padding: 0 15px;
+  }
+}
 
-// @media (min-width: ($breakpoint-grid-sm)) {
-//   @for $i from 1 through 12 {
-//     .col-sm-#{$i} {
-//       @include grid-size(8.333333% * $i);
-//     }
-//   }
-// }
+@media (min-width: ($breakpoint-grid-sm)) {
+  @for $i from 1 through 12 {
+    .col-sm-#{$i} {
+      @include grid-size(8.333333% * $i);
+      padding: 0 15px;
+    }
+  }
+}
 
-// @media (min-width: ($breakpoint-grid-md)) {
-//   @for $i from 1 through 12 {
-//     .col-md-#{$i} {
-//       @include grid-size(8.333333% * $i);
-//     }
-//   }
-// }
+@media (min-width: ($breakpoint-grid-md)) {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      @include grid-size(8.333333% * $i);
+      padding: 0 15px;
+    }
+  }
+}
 
-// @media (min-width: ($breakpoint-grid-lg)) {
-//   @for $i from 1 through 12 {
-//     .col-lg-#{$i} {
-//       @include grid-size(8.333333% * $i);
-//     }
-//   }
-// }
+@media (min-width: ($breakpoint-grid-lg)) {
+  @for $i from 1 through 12 {
+    .col-lg-#{$i} {
+      @include grid-size(8.333333% * $i);
+      padding: 0 15px;
+    }
+  }
+}
 
