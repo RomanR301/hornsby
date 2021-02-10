@@ -77,13 +77,13 @@ function css(){
         outputStyle: "expanded"
       })
     )
-    .pipe(
-      group_media()
-    )
-    .pipe(autoprefixer({
-      overrideBrowserslist: ['last 5 versions'],
-      cascade: true
-    }))
+    // .pipe(
+    //   group_media()
+    // )
+    // .pipe(autoprefixer({
+    //   overrideBrowserslist: ['last 5 versions'],
+    //   cascade: true
+    // }))
     .pipe(dest(path.build.css))
     .pipe(clean_css())
     .pipe(

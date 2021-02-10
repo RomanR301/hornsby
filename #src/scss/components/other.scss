@@ -1,3 +1,38 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
+#breadcrumbs {
+  background: rgba(1, 62, 107, 0.4);
+  padding: 8px 0;
+  position: absolute;
+  width: 100%;
+  z-index: 20;
+}
+
+#breadcrumbs ol {
+  list-style: none;
+  display: flex;
+}
+#breadcrumbs li {
+  position: relative;
+}
+#breadcrumbs li:after {
+  content: '/';
+  color: $whiteColor;
+  margin: 0 7px 0 4px;
+}
+#breadcrumbs a {
+  text-decoration: none;
+}
+#breadcrumbs span {
+  color: $whiteColor;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 24px;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  @include transition(.3);
+}
+#breadcrumbs span:hover {
+  border-color: $whiteColor;
+}

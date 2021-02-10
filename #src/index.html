@@ -1,6 +1,50 @@
 @@include('_header.html')
 <main>
-  MAIN CONTENT
+  <section class="main-screen">
+    <div class="container">
+      <div class="main-screen__inner">
+        <img class="main-screen-person" src="./img/richard-image.png"
+          alt="Richard Hornsby, Board Certified Criminal Trial Lawyer">
+        <div class="main-screen__welcome">
+          <div class="person-title heading-1">Richard E. Hornsby, P.A.</div>
+          <div class="person-subtitle heading-2">We set the course and help navigate your legal journey</div>
+        </div>
+        <div class="main-screen__form">
+          <form action="" id="contact-form">
+            <legend class="border-red">Available 24/7</legend>
+            <p class="text-white mb-16">Fill out the consultation form and
+              receive a response today.</p>
+            <div class="form-group">
+              <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your name *"
+                required="" data-error="Name is required.">
+            </div>
+            <div class="form-group">
+              <input id="form_email" type="email" name="email" class="form-control"
+                placeholder="Please enter your email *" required="" data-error="Valid email is required.">
+              <div class="help-block with-errors">
+              </div>
+            </div>
+            <div class="form-group">
+              <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Please enter your phone">
+              <div class="help-block with-errors">
+              </div>
+            </div>
+            <div class="form-group">
+              <textarea id="form_message" name="message" class="form-control"
+                placeholder="Brief description of charges *" rows="4" required=""
+                data-error="Please, leave us a message."></textarea>
+              <div class="help-block with-errors">
+              </div>
+            </div>
+            <div class="form-submit">
+              <button type="submit" class="btn-primary">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 @@include('_footer.html')
