@@ -1488,30 +1488,36 @@ strong {
   padding: 24px 0 0 0;
 }
 
-.featured img {
-  display: block;
-  height: 80px;
-  object-fit: contain;
+.featured a {
+  display: flex;
   width: 18%;
+  height: 80px;
   margin: 0 14px 30px 14px;
+  text-decoration: none;
 }
 
 @media (max-width: 991px) {
-  .featured img {
+  .featured a {
     width: 29% !important;
   }
 }
 
 @media (max-width: 767px) {
-  .featured img {
+  .featured a {
     width: 43% !important;
   }
 }
 
 @media (max-width: 400px) {
-  .featured img {
+  .featured a {
     width: 41% !important;
   }
+}
+
+.featured img {
+  display: block;
+  object-fit: contain;
+  width: 100%;
 }
 
 .featured .logo-cnn {
@@ -1618,6 +1624,7 @@ strong {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
 }
 
 .socials-logo {
