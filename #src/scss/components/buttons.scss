@@ -10,6 +10,7 @@
     background: $redColor;
     padding: 14px 32px;
     border: 2px solid $redColor;
+    text-decoration: none;
     @include transition(.3);
     cursor: pointer;
     &:hover {

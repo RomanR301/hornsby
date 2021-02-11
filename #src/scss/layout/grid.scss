@@ -23,10 +23,17 @@
   display: flex;
   flex-flow: row wrap;
   margin: 0 -15px;
+  &.m-row {
+    margin: 0;
+  }
 }
 
 .mb-16 {
   margin-bottom: 16px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
 }
 
 @for $i from 1 through 12 {
