@@ -150,17 +150,17 @@ strong {
 
 .heading-1 {
   font-size: 42px;
-  font-size: -webkit-calc(30px + (42 - 30) * ((100vw - 300px) / (1900 - 300)));
-  font-size: -moz-calc(30px + (42 - 30) * ((100vw - 300px) / (1900 - 300)));
-  font-size: calc(30px + (42 - 30) * ((100vw - 300px) / (1900 - 300)));
+  font-size: -webkit-calc(26px + (42 - 26) * ((100vw - 300px) / (1900 - 300)));
+  font-size: -moz-calc(26px + (42 - 26) * ((100vw - 300px) / (1900 - 300)));
+  font-size: calc(26px + (42 - 26) * ((100vw - 300px) / (1900 - 300)));
   line-height: 1.07;
 }
 
 .heading-2 {
   font-size: 30px;
-  font-size: -webkit-calc(24px + (30 - 24) * ((100vw - 300px) / (1900 - 300)));
-  font-size: -moz-calc(24px + (30 - 24) * ((100vw - 300px) / (1900 - 300)));
-  font-size: calc(24px + (30 - 24) * ((100vw - 300px) / (1900 - 300)));
+  font-size: -webkit-calc(22px + (30 - 22) * ((100vw - 300px) / (1900 - 300)));
+  font-size: -moz-calc(22px + (30 - 22) * ((100vw - 300px) / (1900 - 300)));
+  font-size: calc(22px + (30 - 22) * ((100vw - 300px) / (1900 - 300)));
   line-height: 1.33;
 }
 

@@ -34,12 +34,12 @@
 }
 
 .heading-1 {
-  @include fontSize(30, 42);
+  @include fontSize(26, 42);
   line-height: 1.07;
 }
 
 .heading-2 {
-  @include fontSize(24, 30);
+  @include fontSize(22, 30);
   line-height: 1.33;
 }
 
