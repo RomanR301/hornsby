@@ -315,6 +315,12 @@ strong {
   transition: all 0.3s ease-out;
 }
 
+@media (max-width: 991px) {
+  .accordion__item .icon-arrow {
+    transition: none;
+  }
+}
+
 .accordion__content {
   display: none;
   background: #f3f4f5;
@@ -961,6 +967,10 @@ strong {
 
 .header-buttons .btn-primary span {
   font-weight: 700;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 @media (max-width: 1500px) {
@@ -976,6 +986,10 @@ strong {
 }
 
 .header-buttons .btn-primary:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.header-buttons .btn-primary:hover span {
   color: rgba(255, 255, 255, 0.75);
 }
 

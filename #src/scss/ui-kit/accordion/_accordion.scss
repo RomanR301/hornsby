@@ -23,6 +23,9 @@
       top: 0;
       cursor: pointer;
       @include transition(0.3);
+      @media (max-width: $breakpoint-lg) {
+        transition: none;
+      }
     }
   }
   &__content {
