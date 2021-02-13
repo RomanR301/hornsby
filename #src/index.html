@@ -3,6 +3,8 @@
   <section class="main-screen">
     <div class="container">
       <div class="main-screen__inner">
+        <img class="main-screen-person" src="./img/richard-image.png"
+        alt="Richard Hornsby, Board Certified Criminal Trial Lawyer">
         <div class="main-screen__welcome">
           <div class="person-title heading-1">Richard E. Hornsby, P.A.</div>
           <div class="person-subtitle heading-2">We set the course and help navigate your legal journey</div>
@@ -39,8 +41,7 @@
             </div>
           </form>
         </div>
-        <img class="main-screen-person" src="./img/richard-image.png"
-          alt="Richard Hornsby, Board Certified Criminal Trial Lawyer">
+      
       </div>
     </div>
   </section>
@@ -322,4 +323,10 @@
   </section>
 </main>
 
+
+<script>
+  window.onload = function () {
+    document.querySelector('.home-link').classList.add('active');
+  };
+</script>
 @@include('_footer.html')

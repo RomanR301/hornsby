@@ -11,7 +11,7 @@
   @media (max-width: $breakpoint-lg) {
     height: auto;
   }
-  &:before {
+  &:before, &:after {
     content: '';
     background: rgba(20,49,72,.3);
     width: 100%;
@@ -19,6 +19,18 @@
     position: absolute;
     left: 0;
     top: 0;
+    pointer-events: none;
+  }
+  &:after {
+    z-index: 2003;
+    opacity: 0;
+    background: rgba(0,0,0,.5);
+    @include transition(.3);
+  }
+  &.active {
+    &:after {
+      opacity: 1;
+    }
   }
   & .container {
     height: 100%;
@@ -54,7 +66,7 @@
     @media (max-width: $breakpoint-md) {
       width: 240px;
       position: static;
-      margin: 0 auto;
+      margin: 50px auto 0 auto;
     }
   }
   &__welcome {
@@ -69,6 +81,7 @@
       margin: 50px 0 30px 0;
     }
     @media (max-width: $breakpoint-md) {
+      margin-top: 0;
       padding: 25px 12px;
     }
     & .person-title {

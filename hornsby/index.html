@@ -17,7 +17,10 @@
   <header class="header">
     <div class="container">
       <div class="header-buttons">
-        <a href="tel:4075401551" class="header-call btn-primary">Call Today: 407-540-1551</a>
+        <a href="tel:4075401551" class="header-call btn-primary">
+          <span>Call Today:</span>
+          <span class="number">407-540-1551</span>
+        </a>
         <a href="#" class="btn-primary">Free Consultation</a>
       </div>
     </div>
@@ -25,25 +28,80 @@
   <nav id="menu">
     <div class="container">
       <div class="menu-inner-container">
-        <a href="../" class="header-logo">
-          <img src="./img/main-logo.svg" alt="Richard Hornsby, Board Certified Criminal Trial Lawyer">
-        </a>
-        <div class="navbar">
-          <ul class="menu">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">CONTACT</a></li>
-            <li><a href="#">FEDERAL DEFENSE</a></li>
-            <li><a href="#">FLORIDA DEFENSE</a></li>
-            <li><a href="#">PAST RESULTS</a></li>
-            <a href="tel:4075401551" class="header-call btn-primary">Call Today: 407-540-1551</a>
-          </ul>
-        </div>
         <div class="hamburger">
           <span></span>
           <span></span>
           <span></span>
           <span></span>
+        </div>
+        <a href="../" class="header-logo">
+          <img src="./img/main-logo.svg" alt="Richard Hornsby, Board Certified Criminal Trial Lawyer">
+        </a>
+        <div class="navbar">
+          <ul class="menu">
+            <li><a class="home-link" href="#">HOME</a></li>
+            <li><a class="about-link" href="#">ABOUT</a></li>
+            <li><a class="contact-link" href="#">CONTACT</a></li>
+            <li class="has-sub-menu">
+              <a class="federal-defense-link" href="#">FEDERAL DEFENSE</a>
+              <i class="icon icon-arrow"></i>
+              <ul class="sub-menu">
+                <li><a href="#" class="menu-link">Sub menu 2.1</a></li>
+                <li><a href="#" class="menu-link">Sub menu 2.2</a></li>
+                <li class="has-sub-menu">
+                  <a href="#" class="menu-link">Sub menu 2.3</a>
+                  <i class="icon icon-arrow"></i>
+                  <ul class="sub-menu">
+                    <li><a href="#" class="menu-link">Sub menu 3.1</a></li>
+                    <li><a href="#" class="menu-link">Sub menu 3.2</a></li>
+                    <li><a href="#" class="menu-link">Sub menu 3.3</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" class="menu-link">Sub menu 2.4</a></li>
+                <li><a href="#" class="menu-link">Sub menu 2.5</a></li>
+                <li><a href="#" class="menu-link">Sub menu 2.6</a></li>
+                <li class="has-sub-menu">
+                  <a href="#" class="menu-link">Sub menu 7</a>
+                  <i class="icon icon-arrow"></i>
+                  <ul class="sub-menu">
+                    <li><a href="#" class="menu-link">Sub menu 3.1</a></li>
+                    <li><a href="#" class="menu-link">Sub menu 3.2</a></li>
+                    <li><a href="#" class="menu-link">Sub menu 3.3</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="has-sub-menu">
+              <a class="florida-defense-link" href="#">FLORIDA DEFENSE</a>
+              <i class="icon icon-arrow"></i>
+              <ul class="sub-menu">
+                <li><a href="#" class="menu-link">Sub menu 2.1</a></li>
+                <li><a href="#" class="menu-link">Sub menu 2.2</a></li>
+                <li class="has-sub-menu">
+                  <a href="#" class="menu-link">Sub menu 2.3</a>
+                  <i class="icon icon-arrow"></i>
+                  <ul class="sub-menu">
+                    <li><a href="#" class="menu-link">Sub menu 3.1</a></li>
+                    <li><a href="#" class="menu-link">Sub menu 3.2</a></li>
+                    <li><a href="#" class="menu-link">Sub menu 3.3</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" class="menu-link">Sub menu 2.4</a></li>
+                <li><a href="#" class="menu-link">Sub menu 2.5</a></li>
+                <li><a href="#" class="menu-link">Sub menu 2.6</a></li>
+                <li class="has-sub-menu">
+                  <a href="#" class="menu-link">Sub menu 7</a>
+                  <i class="icon icon-arrow"></i>
+                  <ul class="sub-menu">
+                    <li><a href="#" class="menu-link">Sub menu 3.1</a></li>
+                    <li><a href="#" class="menu-link">Sub menu 3.2</a></li>
+                    <li><a href="#" class="menu-link">Sub menu 3.3</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a class="results-link" href="#">PAST RESULTS</a></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -63,6 +121,8 @@
   <section class="main-screen">
     <div class="container">
       <div class="main-screen__inner">
+        <img class="main-screen-person" src="./img/richard-image.png"
+        alt="Richard Hornsby, Board Certified Criminal Trial Lawyer">
         <div class="main-screen__welcome">
           <div class="person-title heading-1">Richard E. Hornsby, P.A.</div>
           <div class="person-subtitle heading-2">We set the course and help navigate your legal journey</div>
@@ -99,8 +159,7 @@
             </div>
           </form>
         </div>
-        <img class="main-screen-person" src="./img/richard-image.png"
-          alt="Richard Hornsby, Board Certified Criminal Trial Lawyer">
+      
       </div>
     </div>
   </section>
@@ -382,6 +441,12 @@
   </section>
 </main>
 
+
+<script>
+  window.onload = function () {
+    document.querySelector('.home-link').classList.add('active');
+  };
+</script>
 <footer id="footer" class="footer">
   <div class="container">
     <div class="row m-row footer-row">
