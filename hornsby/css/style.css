@@ -1015,7 +1015,7 @@ strong {
   background: #ffffff;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   #menu {
     padding: 10px 0;
   }
@@ -1039,7 +1039,7 @@ strong {
   }
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   .menu {
     flex-direction: column;
     align-items: flex-start;
@@ -1051,7 +1051,7 @@ strong {
   margin: 0 15px 0 0;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   .menu li {
     margin: 0;
     width: 100%;
@@ -1069,7 +1069,7 @@ strong {
   cursor: pointer;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   .menu li i {
     display: block;
     top: 0;
@@ -1147,7 +1147,7 @@ strong {
   opacity: 1;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   .menu li a {
     padding: 10px 15px;
     color: #ffffff;
@@ -1167,7 +1167,7 @@ strong {
   align-items: center;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   .menu-inner-container {
     justify-content: center;
   }
@@ -1194,6 +1194,12 @@ strong {
 
 @media (max-width: 1400px) {
   .sub-menu {
+    width: 200px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .sub-menu {
     position: static;
     display: none;
     opacity: 1;
@@ -1217,6 +1223,13 @@ strong {
 
 @media (max-width: 1400px) {
   .sub-menu .sub-menu {
+    right: -140px;
+    width: 160px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .sub-menu .sub-menu {
     display: none;
     position: static;
     width: 100%;
@@ -1232,7 +1245,7 @@ strong {
   pointer-events: none;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   .sub-menu li.has-sub-menu i {
     pointer-events: all;
   }
@@ -1246,7 +1259,7 @@ strong {
   text-transform: uppercase;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   .sub-menu li a {
     font-size: 12px;
   }
@@ -1286,7 +1299,7 @@ strong {
   transition: all 0.3s ease-out;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   .sub-menu li a:after {
     display: none;
   }
@@ -1315,7 +1328,7 @@ strong {
   margin-left: auto;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   .navbar {
     position: absolute;
     margin: 0;
@@ -1347,20 +1360,14 @@ strong {
   display: none;
   width: 40px;
   height: 40px;
-  margin-right: 100px;
+  margin-left: auto;
   position: relative;
   z-index: 22;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   .hamburger {
     display: block;
-  }
-}
-
-@media (max-width: 767px) {
-  .hamburger {
-    margin-right: auto;
   }
 }
 
