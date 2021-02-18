@@ -6,7 +6,7 @@
 // }
 
 .container {
-  max-width: 1100px;
+  max-width: 1140px;
   margin: auto;
   padding: 0 15px;
 }
@@ -28,13 +28,75 @@
   }
 }
 
+
+.mb-10 {
+  margin-bottom: 10px!important;
+}
+.mb-15 {
+  margin-bottom: 15px!important;
+}
 .mb-16 {
-  margin-bottom: 16px;
+  margin-bottom: 16px!important;
+}
+.mb-20 {
+  margin-bottom: 20px!important;
+}
+.mb-25 {
+  margin-bottom: 25px!important;
+}
+.mb-30 {
+  margin-bottom: 30px!important;
+}
+.mb-35 {
+  margin-bottom: 35px!important;
+}
+.mb-40 {
+  margin-bottom: 40px!important;
 }
 
-.mb-30 {
-  margin-bottom: 30px;
+.spacer-10 {
+  height: 10px;
 }
+.spacer-15 {
+  height: 15px;
+}
+.spacer-20 {
+  height: 20px;
+}
+.spacer-25 {
+  height: 25px;
+}
+.spacer-30 {
+  height: 30px;
+}
+.spacer-35 {
+  height: 35px;
+}
+.spacer-40 {
+  height: 40px
+}
+
+@media (max-width: $breakpoint-md) {
+  .spacer-30 {
+    height: 20px;
+  }
+  .spacer-35 {
+    height: 25px;
+  }
+  .spacer-40 {
+    height: 30px
+  }
+  .mb-30 {
+    margin-bottom: 20px!important;
+  }
+  .mb-35 {
+    margin-bottom: 25px!important;
+  }
+  .mb-40 {
+    margin-bottom: 30px!important;
+  }
+}
+
 
 @for $i from 1 through 12 {
   .col-xs-#{$i} {

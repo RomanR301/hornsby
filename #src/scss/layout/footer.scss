@@ -4,8 +4,11 @@
 .footer {
   background: #013E6B;
   padding: 48px 0 24px 0;
+  @media (max-width: $breakpoint-lg) {
+    padding-bottom: 100px;
+  }
   @media (max-width: $breakpoint-md) {
-    padding: 24px 0;
+    padding: 24px 0 100px 0;
   }
   & address {
     margin-bottom: 16px;

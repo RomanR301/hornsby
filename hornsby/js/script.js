@@ -16,6 +16,19 @@ let front = {
             }
         });
 
+        $(".toggle__frame .toggle__button").on("click", function(e) {
+          e.preventDefault();
+              if ($(this).parent().hasClass("active")) {
+              $(this).parent().removeClass("active");
+              $(this).parent().find(".toggle__content").slideUp(200);
+              } else {
+              $(".toggle__frame").removeClass("active");
+              $(this).parent().addClass("active");
+              $(".toggle__content").slideUp(200);
+              $(this).parent().find(".toggle__content").slideDown(200);
+              }
+          });
+
         if(window.matchMedia('(min-width: 1400px)').matches){
           $('.has-sub-menu a').hover(
             function(){ 

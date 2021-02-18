@@ -4,14 +4,21 @@
 #breadcrumbs {
   background: rgba(1, 62, 107, 0.4);
   padding: 8px 0;
-  position: absolute;
+  // position: absolute;
   width: 100%;
   z-index: 20;
+  @media (max-width: $breakpoint-md) {
+    padding: 6px 0;
+  }
+  &.home-page-breadcrumbs {
+    position: absolute;
+  }
 }
 
 #breadcrumbs ol {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
 }
 #breadcrumbs li {
   position: relative;
@@ -32,7 +39,31 @@
   text-transform: uppercase;
   border-bottom: 2px solid transparent;
   @include transition(.3);
+  @media (max-width: $breakpoint-md) {
+    font-size: 10px;
+  }
 }
-#breadcrumbs span:hover {
+#breadcrumbs a span:hover {
   border-color: $whiteColor;
+}
+
+.about__image {
+  position: relative;
+  z-index: 1;
+  
+  @media (max-width: $breakpoint-md) {
+    position: static;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 30px;
+  }
+  & img {
+    @include defaultIcon(contain);
+    height: auto;
+    z-index: 1;
+    box-shadow: -16px 16px 1px #CECDCD;
+    @media (max-width: $breakpoint-md) {
+      box-shadow: -8px 8px 1px #CECDCD;
+    }
+  }
 }

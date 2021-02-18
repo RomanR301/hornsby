@@ -1,0 +1,238 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.content {
+  margin: 48px 0;
+  @media (max-width: $breakpoint-md) {
+    margin: 24px 0;
+  }
+  &__block {
+    padding: 32px 22px;
+    margin-bottom: 16px;
+    background: #F3F4F5;
+    border-left: 2px solid $darkBlue;
+    @media (max-width: $breakpoint-md) {
+      padding: 20px 24px;
+    }
+  }
+  & h1, & h2 {
+    padding-left: 8px;
+    border-left: 3px solid $redColor;
+    color: #142D42;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1;
+    margin-bottom: 24px;
+    @media (max-width: $breakpoint-md) {
+      font-size: 20px;
+    }
+  }
+  & h2 {
+    font-size: 22px;
+  }
+  & h3 {
+    font-weight: 500;
+    font-size: 18px;
+    color: $darkBlue;
+    margin-bottom: 16px;
+  }
+  & h4 {
+    font-weight: 500;
+    font-size: 16px;
+    color: $darkBlue;
+    margin-bottom: 16px;
+  }
+  & p {
+    margin-bottom: 20px;
+  }
+  & a {
+    color: $lightBlue;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    @include transition(.3);
+    &:hover {
+      border-color: $lightBlue;
+    }
+  }
+  & blockquote {
+    padding: 32px 24px 32px 80px;
+    color: $darkBlue;
+    position: relative;
+    background: #FFFFFF;
+    margin: 0 0 40px 16px;
+    z-index: 2;
+    display: inline-block;
+    box-shadow: -16px 16px 1px #eaeaea;
+    &:before {
+      content: '';
+      background: url('../../img/icons/icon-quote.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      left: 24px;
+      top: 16px;
+      z-index: 3;
+    }
+    @media (max-width: $breakpoint-md) {
+      margin: 0 0 20px 8px;
+      box-shadow: -8px 8px 1px #eaeaea;
+      padding: 24px 16px 24px 44px;
+      &:before {
+        left: 14px;
+        top: 8px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  & ol.references, ul.references {
+    padding: 0 24px;
+    @media (max-width: $breakpoint-md) {
+      padding: 0 16px;
+    }
+    & li {
+      padding-left: 24px;
+      margin-bottom: 16px;
+      @media (max-width: $breakpoint-md) {
+        padding-left: 16px;
+        margin-bottom: 8px;
+      }
+    }
+  }
+  & ul, & ol {
+    padding-left: 16px;
+    & li {
+      margin-bottom: 10px;
+    }
+  }
+  & table {
+    width: 100%;
+    & caption {
+      font-weight: 500;
+      font-size: 20px;
+      padding: 8px 15px;
+      background-color: #C0C0C0;
+      @media (max-width: $breakpoint-md) {
+        font-size: 18px;
+        padding: 5px 10px;
+      }
+    }
+    & th {
+      text-align: left;
+      font-weight: 500;
+      background-color: #ddd;
+      width: 200px;
+      min-width: 200px;
+      padding: 10px;
+      @media (max-width: $breakpoint-md) {
+        width: 140px;
+        min-width: 140px;
+      }
+    }
+    & td {
+      padding: 10px;
+    }
+  }
+}
+.sidebar {
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 30px;
+  }
+  & .sidenav-item {
+    margin-bottom: 24px;
+    & h4 {
+      padding: 24px 36px;
+      background: $blueColor;
+      color: $whiteColor;
+      position: relative;
+      display: flex;
+      @media (max-width: $breakpoint-md) {
+        padding: 16px 24px;
+      }
+      &:before {
+        content: "";
+        border-left: 3px solid $redColor;
+        display: block;
+        margin-right: 8px;
+      }
+    }
+    & ul {
+      list-style: none;
+      padding: 24px 0;
+      background: #F3F4F5;
+      @media (max-width: $breakpoint-md) {
+        padding: 16px 0;
+      }
+      & li {
+        margin-bottom: 0;
+      }
+      & a {
+        color: #142D42;
+        display: block;
+        padding: 8px 16px 8px 36px;
+        text-decoration: none;
+        @include transition(.3);
+        border: none;
+        font-weight: 400;
+        @media (max-width: $breakpoint-md) {
+          padding: 8px 12px 8px 24px;
+        }
+        &:hover {
+          background: rgba(1, 62, 107, 0.4);
+        }
+      }
+    }
+  }
+  .toggle-frame-set {
+    & .toggle {
+      &__frame {
+        margin-bottom: 2px;
+        &.active {
+          & i {
+            transform: rotate(180deg);
+          }
+        }
+      }
+      &__button {
+        background: #F3F4F5;
+        padding: 16px 24px 16px 36px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        & i {
+          height: 9px;
+          width: 18px;
+          @include transition(.3);
+        }
+      }
+      &__content {
+        padding: 16px 50px;
+        display: none;
+        & ul {
+          list-style: disc;
+          padding: 0;
+          background: #ffffff;
+          list-style: disc;
+        }
+        & li {
+          margin-bottom: 16px;
+          font-weight: 400;
+        }
+        & a {
+          padding: 0;
+          color: $lightBlue;
+          display: inline;
+        }
+      }
+    }
+  }
+}
+
+.mobile-column-reverse {
+  @media (max-width: $breakpoint-md) {
+    flex-direction: column-reverse;
+  }
+}
