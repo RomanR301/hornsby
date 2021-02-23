@@ -2,7 +2,8 @@
 @import "../abstracts/variables";
 // Breadcrumbs 
 #breadcrumbs {
-  background: rgba(1, 62, 107, 0.4);
+  // background: rgba(1, 62, 107, 0.4);
+  background: #013e6b;
   padding: 8px 0;
   // position: absolute;
   width: 100%;
@@ -31,7 +32,7 @@
 #breadcrumbs a {
   text-decoration: none;
 }
-#breadcrumbs span {
+#breadcrumbs span, #breadcrumbs abbr {
   color: $whiteColor;
   font-weight: 500;
   font-size: 12px;

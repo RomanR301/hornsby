@@ -3,16 +3,16 @@ let front = {
   nav: $('.navbar'),
   init: function () {
       this.events();
-      $(".accordion__item .icon-arrow").on("click", function(e) {
+      $(".accordion__item .accordion__button").on("click", function(e) {
         e.preventDefault();
-            if ($(this).parent().parent().hasClass("active")) {
-            $(this).parent().parent().removeClass("active");
-            $(this).parent().parent().find(".accordion__content").slideUp(200);
+            if ($(this).parent().hasClass("active")) {
+            $(this).parent().removeClass("active");
+            $(this).parent().find(".accordion__content").slideUp(200);
             } else {
             $(".accordion__item").removeClass("active");
-            $(this).parent().parent().addClass("active");
+            $(this).parent().addClass("active");
             $(".accordion__content").slideUp(200);
-            $(this).parent().parent().find(".accordion__content").slideDown(200);
+            $(this).parent().find(".accordion__content").slideDown(200);
             }
         });
 
