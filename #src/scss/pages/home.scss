@@ -13,7 +13,7 @@
   }
   &:before, &:after {
     content: '';
-    background: rgba(20,49,72,.3);
+    background: rgba(20,49,72,.7);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -80,6 +80,11 @@
       width: 100%;
       margin: 50px 0 30px 0;
     }
+    &.home-page-welcome {
+      @media (max-width: $breakpoint-lg) {
+        margin-top: 0;
+      }
+    }
     @media (max-width: $breakpoint-md) {
       margin-top: 0;
       padding: 25px 12px;
@@ -126,6 +131,16 @@
     }
     & .btn-primary {
       width: 100%;
+    }
+  }
+}
+
+.sub-landing-main-screen {
+  & .main-screen__inner {
+    align-items: flex-start;
+    padding-top: 35px;
+    @media (max-width: $breakpoint-lg) {
+      padding-top: 0;
     }
   }
 }
