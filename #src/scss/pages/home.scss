@@ -60,13 +60,7 @@
     bottom: 0;
     object-fit: contain;
     @media (max-width: $breakpoint-lg) {
-      width: 430px;
-      left: 0;
-    }
-    @media (max-width: $breakpoint-md) {
-      width: 240px;
-      position: static;
-      margin: 50px auto 0 auto;
+      display: none;
     }
   }
   &__welcome {
@@ -95,6 +89,10 @@
       margin-bottom: 25px;
       font-weight: 600;
       text-transform: uppercase;
+      @media (max-width: 500px) {
+        font-size: 22px;
+        margin-bottom: 15px;
+      }
     }
     & .person-subtitle {
       color: $whiteColor;
@@ -105,7 +103,10 @@
         font-size: 20px;
       }
       @media (max-width: $breakpoint-md) {
-        font-size: 18px;
+        font-size: 16px;
+      }
+      @media (max-width: 500px) {
+        font-size: 15px;
       }
     }
   }
@@ -135,20 +136,28 @@
   }
 }
 
+
 .home-main-screen {
-  // height: 800px;
+  @media (max-width: 500px) {
+    overflow-x: hidden;
+  }
+  & .person-subtitle, & .person-title {
+    @media (max-width: $breakpoint-lg) {
+      display: none;
+    }
+  }
+  & .main-screen__inner {
+    @media (max-width: $breakpoint-lg) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+  }
   & .container {
     height: 100%;
     max-width: 1340px;
     @media (max-width: 1400px) {
       max-width: 1140px;
-    }
-  }
-  & .main-screen__inner {
-    // align-items: center;
-    // justify-content: flex-end;
-    @media (max-width: $breakpoint-md) {
-      // padding-top: 260px;
     }
   }
   & .main-screen-person {
@@ -158,35 +167,30 @@
     @media (max-width: 1400px) {
       left: 260px;
     }
-    @media (max-width: $breakpoint-lg) {
-      height: unset;
-      width: 400px;
-      left: 0;
-    }
-    @media (max-width: $breakpoint-md) {
-      margin: auto;
-      width: 320px;
-    }
   }
   & .main-screen__welcome {
     padding: 24px;
     max-width: 600px;
     margin: 0 0 32px 0;
     @media (max-width: $breakpoint-lg) {
-      max-width: 100%;
-      margin: 20px auto;
+      max-width: 50%;
+      margin: 0 0 15px 0;
     }
     @media (max-width: $breakpoint-md) {
-      // margin-bottom: 0;
-      margin-top: 0;
+      max-width: 100%;
+    }
+    @media (max-width: 500px) {
+      width: calc(100% + 30px);
+      max-width: calc(100% + 30px);
+      margin: 0 -15px 20px -15px;
     }
   }
   & .main-screen__awards {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 30px;
-    @media (max-width: $breakpoint-md) {
+    margin-bottom: 25px;
+    @media (max-width: $breakpoint-lg) {
       flex-wrap: wrap;
       margin-bottom: 10px;
       & .awards__item {
@@ -199,12 +203,12 @@
     }
     & img {
       display: block;
-      height: 40px;
+      height: 50px;
       width: 100%;
       object-fit: contain;
-      margin-bottom: 17px;
+      // margin-bottom: 17px;
       @media (max-width: $breakpoint-md) {
-        margin: 0 auto 20px auto;
+        margin: 0 auto 0 auto;
       }
     }
   }
@@ -213,6 +217,57 @@
     align-items: center;
   }
 }
+
+
+.main-screen-person.--mobile {
+  display: none;
+  @media (max-width: $breakpoint-lg) {
+    display: block;
+    width: 360px;
+    min-width: 360px;
+    position: static;
+    margin-left: auto;
+    position: static;
+  }
+  @media (max-width: $breakpoint-md) {
+    width: 300px;
+    min-width: 300px;
+  }
+  @media (max-width: 500px) {
+    width: 270px;
+    min-width: 270px;
+    margin-right: -80px;
+    margin-top: 20px;
+  }
+}
+.main-screen__mobile {
+  display: none;
+  @media (max-width: $breakpoint-lg) {
+    display: block;
+    position: relative;
+    width: 100%;
+    & .main-screen__welcome {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      padding: 0;
+      background: none;
+      width: 60%;
+      transform: translate(0, -50%);
+      margin: 0;
+    }
+    & .person-subtitle, & .person-title {
+      display: block;
+    }
+  }
+  @media (max-width: 500px) {
+    & .main-screen__welcome {
+      width: 70%;
+    }
+  }
+}
+
+
 
 .sub-landing-main-screen {
   & .main-screen__inner {
